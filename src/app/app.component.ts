@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculadora';
+  sum: number;
+  calculate(first:number, second:number) {
+   this.sum = +first + +second;
+  }
 }
