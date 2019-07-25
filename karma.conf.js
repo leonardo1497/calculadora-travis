@@ -19,6 +19,12 @@ module.exports = function (config) {
       dir: require('path').join(__dirname, './coverage/calculadora'),
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
+    },browsers: ['Chrome'],
+    customLaunchers: {
+      ChromeHeadlessCI: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox', '--disable-gpu']
+      }
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
