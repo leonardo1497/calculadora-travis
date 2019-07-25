@@ -12,3 +12,11 @@ script:
 - ng lint
 - ng test --watch=false --progress=false --browsers=ChromeHeadlessCI
 - ng build --prod --base-href https://leonardo1497.github.io/calculadora-travis/
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  on:
+    branch: master
